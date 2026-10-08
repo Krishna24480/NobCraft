@@ -1,0 +1,461 @@
+/* =========================================
+   UPLOAD PROJECT PAGE
+========================================= */
+
+.upload-project-page {
+    min-height: 100vh;
+    width: 100%;
+
+    padding: 50px 20px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(circle at 10% 10%,
+            rgba(124, 58, 237, 0.14),
+            transparent 32%),
+        radial-gradient(circle at 90% 90%,
+            rgba(168, 85, 247, 0.10),
+            transparent 30%),
+        #070a13;
+
+    color: #ffffff;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   WRAPPER
+========================================= */
+
+.upload-project-wrapper {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.upload-project-header {
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-btn {
+    border: none;
+
+    padding: 0;
+
+    margin-bottom: 25px;
+
+    background: transparent;
+
+    color: #a78bfa;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.back-btn:hover {
+    color: #c4b5fd;
+
+    transform: translateX(-4px);
+}
+
+
+/* =========================================
+   BADGE
+========================================= */
+
+.page-badge {
+    display: inline-block;
+
+    padding: 7px 13px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid rgba(139, 92, 246, 0.25);
+
+    border-radius: 50px;
+
+    background: rgba(139, 92, 246, 0.08);
+
+    color: #a78bfa;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+   HEADER CONTENT
+========================================= */
+
+.header-content h1 {
+    margin: 0 0 10px;
+
+    font-size: 42px;
+    line-height: 1.2;
+
+    font-weight: 700;
+
+    letter-spacing: -0.7px;
+}
+
+.header-content p {
+    margin: 0;
+
+    color: #9ca3af;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.upload-project-form {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 35px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.045),
+            rgba(255, 255, 255, 0.015));
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.3);
+
+    backdrop-filter: blur(15px);
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+    width: 100%;
+
+    margin-bottom: 23px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #e5e7eb;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 15px;
+
+    border: 1px solid #303750;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #090d19;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* Placeholder */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #6b7280;
+}
+
+
+/* Focus */
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #8b5cf6;
+
+    background: #0b0f1e;
+
+    box-shadow:
+        0 0 0 3px rgba(139, 92, 246, 0.12);
+}
+
+
+/* Textarea */
+
+.form-group textarea {
+    min-height: 150px;
+
+    resize: vertical;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   SMALL HELP TEXT
+========================================= */
+
+.form-group small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #6b7280;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   TWO COLUMN ROW
+========================================= */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   UPLOAD BUTTON
+========================================= */
+
+.upload-btn {
+    width: 100%;
+
+    min-height: 52px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 8px;
+
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(135deg,
+            #7c3aed,
+            #9333ea);
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+/* Hover */
+
+.upload-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 35px rgba(124, 58, 237, 0.3);
+}
+
+
+/* Active */
+
+.upload-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+
+/* Disabled */
+
+.upload-btn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   LOADING SPINNER
+========================================= */
+
+.loading-spinner {
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid rgba(255, 255, 255, 0.35);
+
+    border-top-color: #ffffff;
+
+    border-radius: 50%;
+
+    animation: uploadSpinner 0.7s linear infinite;
+}
+
+@keyframes uploadSpinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .upload-project-page {
+        padding: 40px 18px;
+    }
+
+    .header-content h1 {
+        font-size: 35px;
+    }
+
+    .upload-project-form {
+        padding: 28px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+    .upload-project-page {
+        padding: 30px 14px;
+    }
+
+    .upload-project-header {
+        margin-bottom: 28px;
+    }
+
+    .header-content h1 {
+        font-size: 29px;
+    }
+
+    .header-content p {
+        font-size: 14px;
+    }
+
+    .upload-project-form {
+        padding: 22px 18px;
+
+        border-radius: 16px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 13px;
+
+        font-size: 14px;
+    }
+
+    .form-group textarea {
+        min-height: 130px;
+    }
+
+    .upload-btn {
+        min-height: 48px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+
+    .upload-project-page {
+        padding: 25px 10px;
+    }
+
+    .upload-project-form {
+        padding: 20px 14px;
+    }
+
+    .header-content h1 {
+        font-size: 26px;
+    }
+}

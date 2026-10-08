@@ -1,0 +1,525 @@
+/* ========================================
+   NOBCRAFT ADMIN DASHBOARD
+======================================== */
+
+.admin-dashboard {
+    min-height: 100vh;
+    width: 100%;
+
+    background:
+        radial-gradient(circle at 10% 10%,
+            rgba(147, 51, 234, 0.15),
+            transparent 30%),
+        radial-gradient(circle at 90% 80%,
+            rgba(124, 58, 237, 0.12),
+            transparent 30%),
+        #080b16;
+
+    color: #ffffff;
+
+    font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.admin-dashboard-header {
+    width: 100%;
+    min-height: 80px;
+
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: rgba(8, 11, 22, 0.75);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    position: relative;
+    z-index: 10;
+}
+
+
+/* ========================================
+   BRAND
+======================================== */
+
+.admin-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.admin-brand h1 {
+    margin: 0;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+
+    background: linear-gradient(135deg,
+            #ffffff,
+            #c084fc);
+
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.admin-brand span {
+    padding: 5px 10px;
+
+    border: 1px solid rgba(168, 85, 247, 0.25);
+
+    border-radius: 50px;
+
+    background: rgba(147, 51, 234, 0.08);
+
+    color: #c084fc;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* ========================================
+   LOGOUT BUTTON
+======================================== */
+
+.admin-logout-btn {
+    padding: 10px 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.admin-logout-btn:hover {
+    background: rgba(239, 68, 68, 0.12);
+
+    border-color: rgba(239, 68, 68, 0.4);
+
+    color: #fca5a5;
+
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   MAIN
+======================================== */
+
+.admin-dashboard-main {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding: 90px 0 100px;
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.dashboard-intro {
+    max-width: 700px;
+
+    margin-bottom: 55px;
+}
+
+.dashboard-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 14px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid rgba(168, 85, 247, 0.3);
+
+    border-radius: 50px;
+
+    background: rgba(147, 51, 234, 0.08);
+
+    color: #c084fc;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.dashboard-intro h2 {
+    margin: 0 0 15px;
+
+    color: #ffffff;
+
+    font-size: clamp(38px, 5vw, 58px);
+
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+}
+
+.dashboard-intro h2 span {
+    font-size: 0.75em;
+}
+
+.dashboard-intro p {
+    max-width: 600px;
+
+    margin: 0;
+
+    color: #9ca3af;
+
+    font-size: 16px;
+
+    line-height: 1.8;
+}
+
+
+/* ========================================
+   CARDS CONTAINER
+======================================== */
+
+.admin-cards {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ========================================
+   CARD LINK
+======================================== */
+
+.admin-card-link {
+    display: block;
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+/* ========================================
+   CARD
+======================================== */
+
+.admin-card {
+    min-height: 220px;
+
+    padding: 32px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.075),
+            rgba(255, 255, 255, 0.025));
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Glow inside card */
+
+.admin-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -80px;
+    right: -70px;
+
+    border-radius: 50%;
+
+    background: rgba(147, 51, 234, 0.18);
+
+    filter: blur(45px);
+
+    opacity: 0;
+
+    transition: opacity 0.35s ease;
+}
+
+
+/* Card hover */
+
+.admin-card-link:hover .admin-card {
+    transform: translateY(-8px);
+
+    border-color: rgba(168, 85, 247, 0.4);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.35),
+        0 0 35px rgba(147, 51, 234, 0.08);
+}
+
+.admin-card-link:hover .admin-card::before {
+    opacity: 1;
+}
+
+
+/* ========================================
+   CARD ICON
+======================================== */
+
+.admin-card-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    border: 1px solid rgba(168, 85, 247, 0.25);
+
+    border-radius: 14px;
+
+    background: rgba(147, 51, 234, 0.12);
+
+    color: #c084fc;
+
+    font-size: 28px;
+    font-weight: 300;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.admin-card-link:hover .admin-card-icon {
+    transform: rotate(5deg) scale(1.05);
+
+    background: rgba(147, 51, 234, 0.2);
+}
+
+.manage-icon {
+    font-size: 22px;
+}
+
+
+/* ========================================
+   CARD CONTENT
+======================================== */
+
+.admin-card-content {
+    position: relative;
+    z-index: 2;
+}
+
+.admin-card-content h3 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.admin-card-content p {
+    max-width: 400px;
+
+    margin: 0;
+
+    color: #9ca3af;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   CARD ARROW
+======================================== */
+
+.admin-card-arrow {
+    position: absolute;
+
+    right: 28px;
+    bottom: 27px;
+
+    color: #a855f7;
+
+    font-size: 25px;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.admin-card-link:hover .admin-card-arrow {
+    transform: translateX(7px);
+
+    color: #d8b4fe;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 800px) {
+
+    .admin-dashboard-header {
+        padding: 0 5%;
+    }
+
+    .admin-dashboard-main {
+        width: 90%;
+
+        padding-top: 70px;
+    }
+
+    .admin-cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 550px) {
+
+    .admin-dashboard-header {
+        min-height: 70px;
+
+        padding: 0 20px;
+    }
+
+    .admin-brand {
+        gap: 7px;
+    }
+
+    .admin-brand h1 {
+        font-size: 20px;
+    }
+
+    .admin-brand span {
+        display: none;
+    }
+
+    .admin-logout-btn {
+        padding: 9px 14px;
+
+        font-size: 13px;
+    }
+
+    .admin-dashboard-main {
+        width: calc(100% - 40px);
+
+        padding: 55px 0 70px;
+    }
+
+    .dashboard-intro {
+        margin-bottom: 40px;
+    }
+
+    .dashboard-intro h2 {
+        font-size: 36px;
+
+        letter-spacing: -1px;
+    }
+
+    .dashboard-intro p {
+        font-size: 14px;
+    }
+
+    .admin-cards {
+        gap: 18px;
+    }
+
+    .admin-card {
+        min-height: 200px;
+
+        padding: 24px;
+
+        border-radius: 18px;
+    }
+
+    .admin-card-icon {
+        width: 46px;
+        height: 46px;
+
+        margin-bottom: 22px;
+
+        font-size: 24px;
+    }
+
+    .admin-card-content h3 {
+        font-size: 20px;
+    }
+
+    .admin-card-content p {
+        font-size: 13px;
+    }
+
+    .admin-card-arrow {
+        right: 22px;
+        bottom: 22px;
+
+        font-size: 22px;
+    }
+
+}

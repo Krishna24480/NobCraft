@@ -1,0 +1,283 @@
+/* =========================================
+   ADMIN LOGIN PAGE
+========================================= */
+
+.admin-login-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px 20px;
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(circle at 20% 20%,
+            rgba(124, 58, 237, 0.18),
+            transparent 35%),
+        radial-gradient(circle at 80% 80%,
+            rgba(168, 85, 247, 0.12),
+            transparent 35%),
+        #070a13;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================
+   LOGIN BOX
+========================================= */
+
+.admin-login-box {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 42px;
+
+    box-sizing: border-box;
+
+    background: rgba(17, 22, 42, 0.92);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.45),
+        0 0 40px rgba(124, 58, 237, 0.08);
+
+    backdrop-filter: blur(15px);
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.admin-login-box h1 {
+    margin: 0;
+
+    font-size: 34px;
+    font-weight: 700;
+
+    text-align: center;
+
+    letter-spacing: -0.5px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.admin-login-box>p {
+    margin: 12px 0 32px;
+
+    color: #9ca3af;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.admin-login-box form {
+    width: 100%;
+}
+
+
+/* =========================================
+   INPUT GROUP
+========================================= */
+
+.input-group {
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #e5e7eb;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.input-group input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 14px 15px;
+
+    border: 1px solid #303750;
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #090d19;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* Placeholder */
+
+.input-group input::placeholder {
+    color: #6b7280;
+}
+
+
+/* Focus */
+
+.input-group input:focus {
+    border-color: #8b5cf6;
+
+    background: #0b0f1e;
+
+    box-shadow:
+        0 0 0 3px rgba(139, 92, 246, 0.12),
+        0 0 20px rgba(139, 92, 246, 0.08);
+}
+
+
+/* =========================================
+   LOGIN BUTTON
+========================================= */
+
+.admin-login-box button {
+    width: 100%;
+
+    margin-top: 8px;
+
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(135deg,
+            #7c3aed,
+            #9333ea);
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+/* Hover */
+
+.admin-login-box button:hover:not(:disabled) {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 30px rgba(124, 58, 237, 0.3);
+}
+
+
+/* Click */
+
+.admin-login-box button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+
+/* Disabled */
+
+.admin-login-box button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .admin-login-page {
+        padding: 20px 15px;
+    }
+
+    .admin-login-box {
+        padding: 30px 22px;
+
+        border-radius: 18px;
+    }
+
+    .admin-login-box h1 {
+        font-size: 28px;
+    }
+
+    .admin-login-box>p {
+        font-size: 14px;
+
+        margin-bottom: 26px;
+    }
+
+    .input-group input {
+        padding: 13px;
+
+        font-size: 14px;
+    }
+
+    .admin-login-box button {
+        padding: 13px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL DEVICES
+========================================= */
+
+@media (max-width: 360px) {
+
+    .admin-login-box {
+        padding: 25px 18px;
+    }
+
+    .admin-login-box h1 {
+        font-size: 25px;
+    }
+}

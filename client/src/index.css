@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #030305;
+    color: #ffffff;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+a {
+    font-family: inherit;
+}

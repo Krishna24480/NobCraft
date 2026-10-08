@@ -1,0 +1,644 @@
+/* =========================================
+   NOBCRAFT HERO
+========================================= */
+
+.hero {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #030305;
+    color: #ffffff;
+
+    /* Small gap below navbar */
+    padding-top: 25px;
+    padding-bottom: 40px;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.hero-container {
+    width: min(1150px, 92%);
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    z-index: 5;
+}
+
+
+.hero-content {
+    width: 100%;
+    max-width: 800px;
+}
+
+
+/* =========================================
+   BACKGROUND GLOWS
+========================================= */
+
+.hero-glow {
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    right: -200px;
+    top: 30px;
+
+    border-radius: 50%;
+
+    background: rgba(99, 91, 255, 0.16);
+
+    filter: blur(120px);
+
+    pointer-events: none;
+}
+
+
+.hero-glow-two {
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    left: -150px;
+    bottom: 0;
+
+    border-radius: 50%;
+
+    background: rgba(124, 58, 237, 0.10);
++
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+
+.hero-glow-three {
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    left: 45%;
+    top: 20%;
+
+    border-radius: 50%;
+
+    background: rgba(99, 91, 255, 0.05);
+
+    filter: blur(100px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   BADGE
+========================================= */
+
+.hero-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 13px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid rgba(139, 124, 255, 0.25);
+
+    background: rgba(99, 91, 255, 0.08);
+
+    border-radius: 30px;
+
+    color: #b8b2ff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+
+    backdrop-filter: blur(10px);
+}
+
+
+.hero-badge span {
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #7c6cff;
+
+    box-shadow: 0 0 12px #635bff;
+
+    animation: heroPulse 2s infinite;
+}
+
+
+@keyframes heroPulse {
+
+    0% {
+        box-shadow: 0 0 5px #635bff;
+    }
+
+    50% {
+        box-shadow: 0 0 18px #635bff;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #635bff;
+    }
+
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.hero-title {
+    margin: 0 0 24px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(48px, 7vw, 88px);
+
+    line-height: 0.98;
+
+    letter-spacing: -5px;
+
+    font-weight: 700;
+
+    color: #ffffff;
+}
+
+
+.hero-title span {
+    color: #756cff;
+
+    text-shadow:
+        0 0 30px rgba(117, 108, 255, 0.12);
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.hero-text {
+    max-width: 600px;
+
+    margin: 0 0 30px;
+
+    color: #9298a5;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    font-weight: 400;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.hero-buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Primary */
+
+.hero-primary-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 14px 21px;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #635bff,
+            #7c3aed
+        );
+
+    color: #ffffff;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 10px 30px rgba(99, 91, 255, 0.20);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.hero-primary-button span {
+    font-size: 17px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.hero-primary-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 35px rgba(99, 91, 255, 0.32);
+}
+
+
+.hero-primary-button:hover span {
+    transform: translateX(4px);
+}
+
+
+/* Secondary */
+
+.hero-secondary-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 21px;
+
+    border: 1px solid #292d39;
+
+    border-radius: 11px;
+
+    background: transparent;
+
+    color: #d6d8df;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.hero-secondary-button:hover {
+    transform: translateY(-2px);
+
+    border-color: #635bff;
+
+    background: rgba(99, 91, 255, 0.06);
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.hero-stats {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 35px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.hero-stat {
+    min-width: 80px;
+}
+
+
+.hero-stat h3 {
+    margin: 0 0 4px;
+
+    color: #ffffff;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 23px;
+
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+
+.hero-stat p {
+    margin: 0;
+
+    color: #777d89;
+
+    font-family: "Inter", sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+.hero-stat-divider {
+    width: 1px;
+
+    height: 34px;
+
+    background: rgba(255, 255, 255, 0.10);
+}
+
+
+/* =========================================
+   BOTTOM FADE
+========================================= */
+
+.hero-bottom-fade {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 80px;
+
+    background:
+        linear-gradient(
+            to top,
+            #030305,
+            transparent
+        );
+
+    pointer-events: none;
+
+    z-index: 4;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .hero {
+        min-height: auto;
+
+        padding-top: 25px;
+        padding-bottom: 50px;
+    }
+
+
+    .hero-title {
+        font-size: clamp(48px, 9vw, 72px);
+
+        letter-spacing: -4px;
+    }
+
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+
+    .hero-stats {
+        margin-top: 32px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: auto;
+
+        padding-top: 20px;
+        padding-bottom: 45px;
+    }
+
+
+    .hero-container {
+        width: 90%;
+    }
+
+
+    .hero-badge {
+        padding: 6px 11px;
+
+        margin-bottom: 18px;
+
+        font-size: 9px;
+    }
+
+
+    .hero-badge span {
+        width: 6px;
+        height: 6px;
+    }
+
+
+    .hero-title {
+        margin-bottom: 20px;
+
+        font-size: 48px;
+
+        line-height: 1;
+
+        letter-spacing: -3px;
+    }
+
+
+    .hero-text {
+        margin-bottom: 25px;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 9px;
+    }
+
+
+    .hero-primary-button,
+    .hero-secondary-button {
+        width: 100%;
+
+        min-height: 50px;
+    }
+
+
+    .hero-stats {
+        width: 100%;
+
+        gap: 8px;
+
+        justify-content: space-between;
+
+        margin-top: 30px;
+
+        padding-top: 20px;
+    }
+
+
+    .hero-stat {
+        flex: 1;
+
+        min-width: 0;
+
+        text-align: center;
+    }
+
+
+    .hero-stat h3 {
+        font-size: 19px;
+    }
+
+
+    .hero-stat p {
+        font-size: 9px;
+    }
+
+
+    .hero-stat-divider {
+        height: 28px;
+    }
+
+
+    .hero-glow {
+        width: 350px;
+        height: 350px;
+
+        right: -200px;
+
+        top: 50px;
+
+        filter: blur(90px);
+    }
+
+
+    .hero-glow-two {
+        width: 230px;
+        height: 230px;
+
+        left: -150px;
+
+        filter: blur(80px);
+    }
+
+
+    .hero-glow-three {
+        width: 160px;
+        height: 160px;
+
+        filter: blur(70px);
+    }
+
+
+    .hero-bottom-fade {
+        height: 60px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .hero {
+        padding-top: 18px;
+        padding-bottom: 40px;
+    }
+
+
+    .hero-title {
+        font-size: 42px;
+
+        letter-spacing: -2.5px;
+    }
+
+
+    .hero-text {
+        font-size: 13px;
+    }
+
+
+    .hero-stat h3 {
+        font-size: 17px;
+    }
+
+
+    .hero-stat p {
+        font-size: 8px;
+    }
+
+}

@@ -1,0 +1,952 @@
+/* =========================================
+   SERVICES PAGE
+========================================= */
+
+.services-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  padding: 90px 6% 100px;
+
+  color: #ffffff;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(91, 45, 255, 0.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 10% 70%,
+      rgba(49, 31, 157, 0.14),
+      transparent 30%
+    ),
+    #030711;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.services-glow {
+  position: absolute;
+
+  pointer-events: none;
+
+  border-radius: 50%;
+
+  filter: blur(110px);
+
+  opacity: 0.35;
+
+  z-index: 0;
+}
+
+.glow-one {
+  width: 400px;
+  height: 400px;
+
+  top: 100px;
+  right: -150px;
+
+  background: #5425ff;
+}
+
+.glow-two {
+  width: 300px;
+  height: 300px;
+
+  left: -150px;
+  top: 600px;
+
+  background: #3d20c9;
+}
+
+.glow-three {
+  width: 250px;
+  height: 250px;
+
+  right: 20%;
+  bottom: 100px;
+
+  background: #722dff;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.services-hero {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 900px;
+
+  margin: 30px auto 75px;
+
+  text-align: center;
+}
+
+
+/* Small Badge */
+
+.hero-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 9px 18px;
+
+  border: 1px solid rgba(133, 87, 255, 0.65);
+
+  border-radius: 30px;
+
+  color: #a77aff;
+
+  background: rgba(85, 35, 255, 0.08);
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+}
+
+.hero-badge span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #8a5cff;
+
+  box-shadow: 0 0 12px #7c48ff;
+}
+
+
+/* Main Heading */
+
+.services-hero h1 {
+  margin: 25px 0 20px;
+
+  font-size: clamp(45px, 6vw, 75px);
+
+  line-height: 1.05;
+
+  letter-spacing: -3px;
+
+  font-weight: 800;
+}
+
+.services-hero h1 span {
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #7a3cff,
+    #b35cff
+  );
+
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* Hero Paragraph */
+
+.services-hero p {
+  margin: 0;
+
+  color: #9da8c0;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   SERVICES CONTAINER
+========================================= */
+
+.services-container {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+
+  max-width: 1250px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =========================================
+   SERVICE CARD
+========================================= */
+
+.service-card {
+  position: relative;
+
+  padding: 30px;
+
+  min-height: 650px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  border: 1px solid rgba(105, 119, 156, 0.25);
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15, 23, 42, 0.92),
+      rgba(5, 10, 22, 0.96)
+    );
+
+  backdrop-filter: blur(15px);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* Card Hover */
+
+.service-card:hover {
+  transform: translateY(-10px);
+
+  border-color: rgba(126, 71, 255, 0.7);
+
+  box-shadow:
+    0 20px 60px rgba(37, 13, 125, 0.3),
+    0 0 40px rgba(87, 38, 255, 0.12);
+}
+
+
+/* =========================================
+   PROFESSIONAL CARD
+========================================= */
+
+.featured-card {
+  border-color: rgba(102, 62, 255, 0.65);
+
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(100, 48, 255, 0.15),
+      transparent 40%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(19, 20, 51, 0.95),
+      rgba(5, 10, 22, 0.97)
+    );
+
+  box-shadow:
+    0 0 40px rgba(77, 34, 220, 0.1);
+}
+
+
+/* =========================================
+   POPULAR BADGE
+========================================= */
+
+.popular-badge {
+  position: absolute;
+
+  top: -13px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  padding: 7px 16px;
+
+  white-space: nowrap;
+
+  border-radius: 20px;
+
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      90deg,
+      #6428ff,
+      #8d48ff
+    );
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  box-shadow:
+    0 5px 25px rgba(101, 41, 255, 0.35);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+
+/* Number */
+
+.service-number {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 14px;
+
+  color: #a378ff;
+
+  background: rgba(99, 57, 255, 0.12);
+
+  border: 1px solid rgba(117, 77, 255, 0.25);
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+
+/* Service Name */
+
+.service-label {
+  color: #9d72ff;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.service-label span {
+  margin-right: 5px;
+
+  color: #c39aff;
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.service-card h2 {
+  margin: 25px 0 12px;
+
+  color: #ffffff;
+
+  font-size: 25px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.service-description {
+  min-height: 78px;
+
+  margin: 0;
+
+  color: #8f9ab1;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.divider {
+  width: 100%;
+
+  height: 1px;
+
+  margin: 24px 0;
+
+  background: rgba(255, 255, 255, 0.08);
+}
+
+
+/* =========================================
+   FEATURES TITLE
+========================================= */
+
+.includes-title {
+  margin-bottom: 18px;
+
+  color: #66718a;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+   FEATURE LIST
+========================================= */
+
+.feature-list {
+  flex: 1;
+
+  padding: 0;
+
+  margin: 0;
+
+  list-style: none;
+}
+
+.feature-list li {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 11px;
+
+  margin-bottom: 13px;
+
+  color: #c5ccda;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* Check Circle */
+
+.check {
+  flex-shrink: 0;
+
+  width: 19px;
+  height: 19px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-top: 1px;
+
+  border-radius: 50%;
+
+  color: #9b6aff;
+
+  background: rgba(104, 55, 255, 0.13);
+
+  border: 1px solid rgba(116, 72, 255, 0.2);
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   VIP MAINTENANCE
+========================================= */
+
+.featured-card .feature-list li:last-child {
+  color: #bd9aff;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   CARD BOTTOM
+========================================= */
+
+.card-bottom {
+  padding-top: 25px;
+
+  margin-top: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+
+/* Pricing */
+
+.price-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #626d83;
+
+  font-size: 9px;
+
+  letter-spacing: 1.5px;
+
+  font-weight: 700;
+}
+
+.card-bottom strong {
+  color: #ffffff;
+
+  font-size: 18px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   SERVICE BUTTON
+========================================= */
+
+.service-button {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 14px 17px;
+
+  border: 1px solid rgba(116, 72, 255, 0.35);
+
+  border-radius: 12px;
+
+  color: #ffffff;
+
+  background: rgba(82, 40, 214, 0.12);
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.service-button:hover {
+  background:
+    linear-gradient(
+      90deg,
+      #5520df,
+      #7138ff
+    );
+
+  border-color: transparent;
+
+  box-shadow:
+    0 10px 30px rgba(90, 35, 230, 0.3);
+}
+
+
+/* Arrow */
+
+.arrow {
+  font-size: 20px;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.service-button:hover .arrow {
+  transform: translateX(5px);
+}
+
+
+/* =========================================
+   CTA SECTION
+========================================= */
+
+.services-cta {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 1250px;
+
+  min-height: 230px;
+
+  margin: 70px auto 0;
+
+  padding: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(111, 52, 255, 0.8);
+
+  border-radius: 22px;
+
+  background:
+    radial-gradient(
+      circle at 100% 50%,
+      rgba(82, 30, 255, 0.3),
+      transparent 40%
+    ),
+    linear-gradient(
+      120deg,
+      rgba(38, 16, 92, 0.8),
+      rgba(5, 8, 20, 0.95)
+    );
+
+  box-shadow:
+    0 0 50px rgba(77, 29, 210, 0.12);
+}
+
+
+/* CTA Circle */
+
+.services-cta::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+
+  height: 300px;
+
+  right: 80px;
+
+  top: -150px;
+
+  border: 1px solid rgba(117, 66, 255, 0.25);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CTA CONTENT
+========================================= */
+
+.cta-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* CTA Badge */
+
+.cta-badge {
+  display: inline-block;
+
+  margin-bottom: 13px;
+
+  padding: 7px 13px;
+
+  border-radius: 20px;
+
+  color: #d4c4ff;
+
+  background: rgba(110, 59, 255, 0.22);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+/* CTA Heading */
+
+.services-cta h2 {
+  margin: 0 0 10px;
+
+  color: #ffffff;
+
+  font-size: 32px;
+
+  line-height: 1.1;
+
+  font-weight: 700;
+}
+
+.services-cta h2 span {
+  color: #9360ff;
+}
+
+
+/* CTA Paragraph */
+
+.services-cta p {
+  margin: 0;
+
+  color: #929db4;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   CTA BUTTON
+========================================= */
+
+.cta-button {
+  position: relative;
+
+  z-index: 2;
+
+  min-width: 190px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+
+  padding: 16px 22px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  border-radius: 40px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #5622e9,
+      #7044ff
+    );
+
+  box-shadow:
+    0 12px 35px rgba(81, 31, 221, 0.35);
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 18px 45px rgba(81, 31, 221, 0.5);
+}
+
+.cta-button span {
+  font-size: 20px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+  .services-page {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+
+    max-width: 650px;
+  }
+
+  .service-card {
+    min-height: auto;
+  }
+
+  .service-description {
+    min-height: auto;
+  }
+
+  .services-cta {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .services-page {
+    padding: 65px 18px 70px;
+  }
+
+
+  /* Hero */
+
+  .services-hero {
+    margin: 15px auto 50px;
+  }
+
+  .services-hero h1 {
+    font-size: 42px;
+
+    letter-spacing: -2px;
+  }
+
+  .services-hero p {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+  .services-hero p br {
+    display: none;
+  }
+
+
+  /* Cards */
+
+  .service-card {
+    padding: 23px;
+
+    border-radius: 20px;
+  }
+
+  .service-card h2 {
+    font-size: 23px;
+  }
+
+  .feature-list li {
+    font-size: 13px;
+  }
+
+
+  /* CTA */
+
+  .services-cta {
+    padding: 28px 23px;
+
+    margin-top: 50px;
+
+    border-radius: 20px;
+  }
+
+  .services-cta h2 {
+    font-size: 27px;
+  }
+
+  .services-cta p br {
+    display: none;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .services-page {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .services-hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-badge {
+    font-size: 10px;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+
+  .services-cta {
+    padding: 24px 20px;
+  }
+
+}
