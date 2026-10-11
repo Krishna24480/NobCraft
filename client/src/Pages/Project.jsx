@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Project.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://nobcraft.onrender.com";
 
 const Project = () => {
   const [projects, setProjects] = useState([]);

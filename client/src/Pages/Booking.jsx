@@ -30,7 +30,7 @@ const Booking = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/bookings",
+        "https://nobcraft.onrender.com/api/bookings",
         {
           method: "POST",
 
@@ -163,8 +163,8 @@ const Booking = () => {
           <div className="direct-contact">
             <span>Prefer to talk directly?</span>
 
-            <a href="mailto:hello@nobcraft.com">
-              hello@nobcraft.com
+            <a href="mailto:krajawt244@gmail.com">
+              krajawt244@gmail.com
               <span>↗</span>
             </a>
           </div>

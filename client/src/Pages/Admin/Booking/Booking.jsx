@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Booking.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = "https://nobcraft.onrender.com";
 
 const Booking = () => {
     const [bookings, setBookings] = useState([]);
