@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./UploadProject.css";
 
-const API_URL = "https://nobcraft.onrender.com";
+const API_URL = "localhost:5000";
 
 const UploadProject = () => {
     const navigate = useNavigate();

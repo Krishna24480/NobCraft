@@ -28,7 +28,7 @@ const AdminLogin = () => {
             setLoading(true);
 
             const response = await fetch(
-                "https://nobcraft.onrender.com/api/admin/login",
+                "http://localhost:5000/api/admin/login",
                 {
                     method: "POST",
                     headers: {

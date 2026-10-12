@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Project.css";
 
-const API_URL = "https://nobcraft.onrender.com";
+const API_URL = "localhost:5000"; // Replace with your backend API URL
 
 const Project = () => {
   const [projects, setProjects] = useState([]);

@@ -30,7 +30,7 @@ const Booking = () => {
 
     try {
       const response = await fetch(
-        "https://nobcraft.onrender.com/api/bookings",
+        "http://localhost:5000/api/bookings",
         {
           method: "POST",
 
